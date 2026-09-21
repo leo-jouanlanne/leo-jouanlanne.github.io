@@ -104,6 +104,9 @@
   h2 { margin: 0; font-size: 1.5rem; font-weight: 700; line-height: 1.2; letter-spacing: -0.01em; }
   h3 { margin: 0; font-size: 1.35rem; font-weight: 700; line-height: 1.25; letter-spacing: -0.01em; }
 
+  .video-embed iframe { display: block; width: 100%; max-width: 504px; height: 541px; border: 0; background: #fff; }
+  .video-fallback { margin: 0.9rem 0 0; font-family: var(--sans); font-size: 0.95rem; }
+
   .project + .project { margin-top: 3rem; }
   .when { margin: 0.2rem 0 0.9rem; color: var(--slate); font-size: 0.95rem; }
   .project p { margin: 0 0 0.9rem; max-width: 40em; }
@@ -140,6 +143,7 @@
   <div class="wrap">
     <nav aria-label="Navigation principale">
       <ul>
+        <li><a href="#video">Vidéo</a></li>
         <li><a href="#projets">Projets</a></li>
         <li><a href="#competences">Compétences</a></li>
         <li><a href="#formation">Formation</a></li>
@@ -159,6 +163,16 @@
         <!-- À AJOUTER : dépose ton CV dans le dépôt sous le nom cv.pdf -->
         <a class="btn btn-primary" href="cv.pdf">Télécharger mon CV</a>
         <a class="btn btn-secondary" href="#contact">Me contacter</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="video" aria-labelledby="h-video">
+    <div class="wrap">
+      <h2 id="h-video">Vidéo</h2>
+      <div class="video-embed">
+        <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7396638555462250497?collapsed=1" height="541" width="504" allowfullscreen loading="lazy" title="Vidéo de présentation de Léo Jouanlanne, publication LinkedIn"></iframe>
+        <p class="video-fallback"><a href="https://www.linkedin.com/feed/update/urn:li:ugcPost:7396638555462250497/">Voir la publication sur LinkedIn</a></p>
       </div>
     </div>
   </section>

@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Léo Jouanlanne - Cybersécurité, recherche d'alternance à Lyon</title>
+<meta name="description" content="Étudiant en 3e année de Bachelor Cybersécurité à Lyon. Recherche une alternance en administration systèmes et réseaux, support informatique ou SOC.">
+<meta name="theme-color" content="#F3F5F6">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230A6B69'/%3E%3Ctext x='16' y='23' font-size='20' font-family='sans-serif' font-weight='700' text-anchor='middle' fill='white'%3EL%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500&family=Schibsted+Grotesk:wght@400;500;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper: #F3F5F6;
+    --ink: #101C28;
+    --slate: #4A5B68;
+    --rule: #CCD5DB;
+    --signal: #0A6B69;
+    --signal-dark: #08514F;
+    --sans: "Schibsted Grotesk", system-ui, -apple-system, "Segoe UI", sans-serif;
+    --serif: "Newsreader", Georgia, "Times New Roman", serif;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; }
+  html { scroll-behavior: smooth; scroll-padding-top: 1rem; }
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--serif);
+    font-size: 1.125rem;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3, nav, .btn, .when, .tools, dt, .contact-list a { font-family: var(--sans); }
+
+  a { color: var(--signal); text-underline-offset: 0.2em; }
+  a:hover { color: var(--signal-dark); }
+  :focus-visible { outline: 3px solid var(--signal); outline-offset: 3px; border-radius: 3px; }
+
+  .skip {
+    position: absolute; left: 1rem; top: -4rem;
+    background: var(--ink); color: #fff; padding: 0.6rem 1rem; border-radius: 6px;
+    font-family: var(--sans); z-index: 10;
+  }
+  .skip:focus { top: 1rem; color: #fff; }
+
+  .wrap { max-width: 1120px; margin: 0 auto; padding-inline: clamp(1.25rem, 5vw, 3rem); }
+
+  /* En-tête */
+  header .wrap { display: flex; justify-content: flex-end; padding-block: 1.5rem; }
+  nav ul { list-style: none; display: flex; flex-wrap: wrap; gap: 0.5rem 1.75rem; margin: 0; padding: 0; }
+  nav a { color: var(--ink); text-decoration: none; font-weight: 500; font-size: 1rem; }
+  nav a:hover { color: var(--signal); text-decoration: underline; }
+
+  /* Hero */
+  .hero { padding-block: clamp(2.5rem, 8vw, 6rem) clamp(3rem, 8vw, 5.5rem); }
+  h1 {
+    margin: 0 0 clamp(1.5rem, 4vw, 2.5rem);
+    font-weight: 800;
+    font-size: clamp(3.5rem, 13vw, 9.5rem);
+    line-height: 0.9;
+    letter-spacing: -0.04em;
+  }
+  h1 span { display: block; }
+  .lead {
+    margin: 0 0 1rem;
+    max-width: 30em;
+    font-size: clamp(1.35rem, 2.6vw, 1.75rem);
+    line-height: 1.4;
+  }
+  .status {
+    display: flex; gap: 0.85rem; align-items: baseline;
+    margin: 0 0 2rem; max-width: 36em; color: var(--slate);
+  }
+  .dot {
+    flex: none; width: 0.7rem; height: 0.7rem; border-radius: 50%;
+    background: var(--signal); transform: translateY(0.05rem);
+    animation: ping 1.6s ease-out 3;
+  }
+  @keyframes ping {
+    0%   { box-shadow: 0 0 0 0 rgba(10, 107, 105, 0.55); }
+    100% { box-shadow: 0 0 0 0.9rem rgba(10, 107, 105, 0); }
+  }
+  .actions { display: flex; flex-wrap: wrap; gap: 0.85rem; }
+  .btn {
+    display: inline-block; padding: 0.8rem 1.35rem; border-radius: 6px;
+    font-weight: 700; font-size: 1rem; text-decoration: none;
+    border: 2px solid var(--signal);
+  }
+  .btn-primary { background: var(--signal); color: #fff; }
+  .btn-primary:hover { background: var(--signal-dark); border-color: var(--signal-dark); color: #fff; }
+  .btn-secondary { color: var(--ink); border-color: var(--ink); }
+  .btn-secondary:hover { background: var(--ink); color: #fff; }
+
+  /* Sections */
+  .section { border-top: 1px solid var(--rule); padding-block: clamp(2.5rem, 6vw, 4rem); }
+  .section .wrap { display: grid; gap: 1.5rem 4rem; grid-template-columns: minmax(0, 1fr); }
+  @media (min-width: 820px) {
+    .section .wrap { grid-template-columns: minmax(0, 1fr) minmax(0, 2.3fr); }
+  }
+  h2 { margin: 0; font-size: 1.5rem; font-weight: 700; line-height: 1.2; letter-spacing: -0.01em; }
+  h3 { margin: 0; font-size: 1.35rem; font-weight: 700; line-height: 1.25; letter-spacing: -0.01em; }
+
+  .project + .project { margin-top: 3rem; }
+  .when { margin: 0.2rem 0 0.9rem; color: var(--slate); font-size: 0.95rem; }
+  .project p { margin: 0 0 0.9rem; max-width: 40em; }
+  .project ul { margin: 0 0 0.9rem; padding-left: 1.2rem; max-width: 40em; }
+  .project li { margin-bottom: 0.45rem; }
+  .tools { margin: 0; color: var(--slate); font-size: 0.95rem; }
+
+  dl { margin: 0; display: grid; grid-template-columns: minmax(0, 1fr); gap: 0.2rem 1.5rem; }
+  dt { font-weight: 700; font-size: 1rem; }
+  dd { margin: 0 0 1rem; max-width: 40em; }
+  @media (min-width: 620px) {
+    dl { grid-template-columns: minmax(9rem, 13rem) minmax(0, 1fr); }
+    dt { padding-top: 0.15rem; }
+    dd { margin-bottom: 0.9rem; }
+  }
+
+  .formation p { margin: 0 0 0.6rem; max-width: 40em; }
+
+  .contact-list { list-style: none; margin: 1rem 0 0; padding: 0; display: grid; gap: 0.6rem; }
+  .contact-list a { font-size: 1.3rem; font-weight: 700; }
+
+  footer { border-top: 1px solid var(--rule); padding-block: 2rem 3rem; color: var(--slate); font-family: var(--sans); font-size: 0.9rem; }
+
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .dot { animation: none; }
+  }
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Aller au contenu</a>
+
+<header>
+  <div class="wrap">
+    <nav aria-label="Navigation principale">
+      <ul>
+        <li><a href="#projets">Projets</a></li>
+        <li><a href="#competences">Compétences</a></li>
+        <li><a href="#formation">Formation</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <section class="hero" aria-labelledby="titre">
+    <div class="wrap">
+      <h1 id="titre"><span>Léo</span><span>Jouanlanne</span></h1>
+      <p class="lead">Étudiant en 3e année de Bachelor Cybersécurité à Nexa Digital School, à Lyon.</p>
+      <p class="status"><span class="dot" aria-hidden="true"></span><span>Je cherche une alternance à Lyon et dans ses environs : administrateur systèmes et réseaux, technicien support ou analyste SOC.</span></p>
+      <div class="actions">
+        <!-- À AJOUTER : dépose ton CV dans le dépôt sous le nom cv.pdf -->
+        <a class="btn btn-primary" href="cv.pdf">Télécharger mon CV</a>
+        <a class="btn btn-secondary" href="#contact">Me contacter</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="projets" aria-labelledby="h-projets">
+    <div class="wrap">
+      <h2 id="h-projets">Projets</h2>
+      <div>
+        <article class="project">
+          <h3>PixelStore</h3>
+          <p class="when">Projet annuel B2, Nexa Digital School</p>
+          <p>Infrastructure sécurisée d'une entreprise fictive, PixelStore SAS : annuaire Active Directory, pile LAMP avec services web, supervision et gestion de parc. Rendu : un rapport avec schémas réseau et annexes de configuration, puis une soutenance orale de 20 minutes.</p>
+          <p class="tools">Active Directory, LAMP, Zabbix, GLPI, Kali Linux</p>
+        </article>
+
+        <article class="project">
+          <h3>Lab SecOps sur Splunk</h3>
+          <p class="when">Étude de cas d'une attaque par ransomware sur 72 heures</p>
+          <p>Série de labs sur Splunk terminée par une étude de cas évaluée : requêtes SPL, détection d'anomalies par Z-score, reconstitution de la kill chain, détection de mouvement latéral, corrélation avec la criticité des actifs, puis mapping MITRE ATT&amp;CK et documentation de la réponse à incident.</p>
+          <p class="tools">Splunk, SPL, MITRE ATT&amp;CK</p>
+        </article>
+
+        <article class="project">
+          <h3>Stage de technicien informatique chez ar2pi</h3>
+          <p class="when">Juin à août 2026</p>
+          <ul>
+            <li>Mise en place d'un VPN OpenVPN sur un NAS Synology pour l'accès distant des salariés : certificats, chiffrement, DDNS, tests depuis l'extérieur.</li>
+            <li>Sauvegarde hebdomadaire chiffrée du NAS vers un espace cloud.</li>
+            <li>Support utilisateurs : messagerie, réseau (DHCP), comptes et mots de passe, accès aux partages de fichiers.</li>
+          </ul>
+          <p class="tools">Synology DSM, OpenVPN, Cloud Sync, DHCP, SMTP</p>
+        </article>
+
+        <article class="project">
+          <h3>CTF et forensique</h3>
+          <p class="when">Épreuves résolues</p>
+          <p>Cryptographie, forensique réseau (TLS, DNS), stéganographie (image, audio, spectrogramme), OSINT et forensique Git.</p>
+          <p class="tools">Nmap, Metasploit, John the Ripper, Hashcat, Aircrack-ng, BloodHound</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="competences" aria-labelledby="h-competences">
+    <div class="wrap">
+      <h2 id="h-competences">Compétences</h2>
+      <dl>
+        <dt>Systèmes et réseaux</dt>
+        <dd>Linux, VMware, Active Directory, architecture réseau</dd>
+        <dt>Supervision et sécurité</dt>
+        <dd>Splunk, Zabbix, GLPI</dd>
+        <dt>Tests d'intrusion</dt>
+        <dd>Kali Linux, Nmap, Metasploit, John the Ripper, Hashcat, Aircrack-ng, BloodHound</dd>
+        <dt>Développement</dt>
+        <dd>Python, JavaScript, Java, HTML, SQL</dd>
+        <dt>Langues</dt>
+        <dd>Français, anglais (B2), espagnol (A2)</dd>
+      </dl>
+    </div>
+  </section>
+
+  <section class="section" id="formation" aria-labelledby="h-formation">
+    <div class="wrap">
+      <h2 id="h-formation">Formation</h2>
+      <div class="formation">
+        <p>Bachelor Cybersécurité, Nexa Digital School, Lyon (2024-2027).</p>
+        <p>Titre visé : Administrateur Systèmes et Réseaux (RNCP35093).</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="contact" aria-labelledby="h-contact">
+    <div class="wrap">
+      <h2 id="h-contact">Contact</h2>
+      <div>
+        <p style="margin:0;max-width:34em;">Une offre d'alternance, une question, un échange sur la cybersécurité : écris-moi.</p>
+        <ul class="contact-list">
+          <li><a href="mailto:jouanlanne.l@gmail.com">jouanlanne.l@gmail.com</a></li>
+          <li><a href="https://www.linkedin.com/in/l%C3%A9o-jouanlanne-344334325/">LinkedIn</a></li>
+          <li><a href="https://github.com/leo-jouanlanne">GitHub</a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">© 2026 Léo Jouanlanne</div>
+</footer>
+</body>
+</html>
